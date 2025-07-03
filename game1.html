@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Guess the number</title>
+        <h2>Guess the number</h2>
+    </head>
+    <body>
+        <script>
+            Math.floor(Math.random()*)+1;
+            let score=10;
+            let highscore=0;
+            function check(){
+                let guess=document.getElementById("guess").value;
+                let message=document.getElementBy("message").value;
+            
+            if(guess==""){
+                message.textContent="Enter a number";
+                return ;
+            }
+            else if(guess==number){
+                
+               message.textContent="Correct";
+               
+               if(score>highscore){
+                highscore=score;
+                document.getElementById("highscore").textContent=highscore;
+
+               }
+
+            }
+            else{
+                score--;
+                  message.textContent = " Game Over Score is 0.";
+          score = 0;
+            }
+            
+                  document.getElementById("score").textContent = score;
+            }
+        
+        
+        
+        </script>
+    </body>
+</html>
