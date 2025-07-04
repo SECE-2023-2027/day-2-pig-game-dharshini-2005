@@ -1,10 +1,10 @@
-// Generate random number between 1 and 20
+
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
-console.log(secretNumber); // For debugging purposes
+console.log(secretNumber);
 let score = 20;
 let highscore = 0;
 
-// DOM elements
+
 const guessInput = document.getElementById('guess-input');
 const checkBtn = document.getElementById('check-btn');
 const againBtn = document.getElementById('again-btn');
@@ -63,7 +63,6 @@ checkBtn.addEventListener('click', () => {
   }
 });
 
-// Again Button Click
 againBtn.addEventListener('click', () => {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
