@@ -1,9 +1,9 @@
-// Generate random number between 1 and 20
+
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
-// DOM elements
+
 const guessInput = document.getElementById('guess-input');
 const checkBtn = document.getElementById('check-btn');
 const againBtn = document.getElementById('again-btn');
@@ -12,19 +12,18 @@ const scoreDisplay = document.getElementById('score');
 const highscoreDisplay = document.getElementById('highscore');
 const questionMark = document.getElementById('question-mark');
 
-// Display message function
 function displayMessage(msg) {
   message.textContent = msg;
 }
 
-// Check Button Click
+
 checkBtn.addEventListener('click', () => {
   const guess = Number(guessInput.value);
 
   if (!guess) {
-    displayMessage('⛔ No number!');
+    displayMessage('No number!');
   } else if (guess === secretNumber) {
-    displayMessage('🎉 Correct Number!');
+    displayMessage(' Correct Number!');
     questionMark.textContent = secretNumber;
     document.body.style.backgroundColor = '#60b347';
 
@@ -45,7 +44,7 @@ checkBtn.addEventListener('click', () => {
   }
 });
 
-// Again Button Click
+
 againBtn.addEventListener('click', () => {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
